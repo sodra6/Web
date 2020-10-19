@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+
+	<servlet>
+		<servlet-name>life</servlet-name>
+		<servlet-class>servlet.LifeCycleServlet</servlet-class><!-- 실행시킬 클래스파일 -->
+		
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>life</servlet-name><!-- 위에와 연결고리는 이름이라 같아야함  -->
+		<url-pattern>/life</url-pattern> <!-- 어디서 부터시작인지 알려주는것 -->	
+	</servlet-mapping>
+
+
+
+
+</web-app>
