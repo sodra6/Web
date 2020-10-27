@@ -8,15 +8,11 @@
 <link rel="stylesheet" href="/css/reset.css"/>
 <link rel="stylesheet" href="/css/all.min.css"/>
 <link rel="stylesheet" href="/css/notosanskr.css"/>
+<link rel="stylesheet" href="/css/defalt.css"/>
 
-<style>
-	body{
-		font-family: "Noto Sans KR",sans-serif;
-	}
-</style>
 </head>
 <body>
-	<h1><i class="fas fa-book"></i> Awesome Idol Management Service </h1>
+	<h1><a href="/index.jsp"><i class="fas fa-book"></i> Awesome Idol Management Service </a></h1>
 	<ul>
 		<li><a href="/groupList.jsp"><i class="fa fa-user-friends"></i> 그룹목록</a></li>
 		<li><a href="/idolList.jsp"><i class="fas fa-user"></i> 아이돌목록</a></li>

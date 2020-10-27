@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+body{
+	font-family: "Noto Sans KR",sans-serif;
+}
+a{
+	color:#424242;
+}
+a:hover{
+	color:#42A5F5;
+}
+.btn{
+	display: inline-block;
+	padding: 6px 12px;
+	background-color: #424242;
+	color : #fff;
+	font-weight: 700;
+	transition:.2s ease;
+}
+.btn:hover{
+	background-color:#42A5F5;
+	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+a.btn{
+	text-decoration: none;	
+	color:#fff;
+}
+button.btn{
+	cursor:pointer;
+	border:none;
+	font: 700 20px "Noto Sans KR",sans-serif;
+}
+input, select{
+	font:500 20px "Noto Sans KR", sans-serif;
+	padding: 5px;
+}
+label{
+	font-weight:700;
+}
+.fa-female{
+	color:#E91E63;
+}
+.fa-male{
+	color:#03A9F4;
+	
+}

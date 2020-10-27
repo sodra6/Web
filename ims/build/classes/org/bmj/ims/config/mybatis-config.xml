@@ -14,6 +14,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<typeAliases>
 		<typeAlias alias="Group" type="org.bmj.ims.vo.Group"/>
 		<typeAlias alias="Idol" type="org.bmj.ims.vo.Idol"/>
+		<typeAlias alias="PageVo" type="org.bmj.ims.vo.PageVo"/>
 	</typeAliases>
 
 	<!-- 데이터베이스와 연결 환경설정 -->

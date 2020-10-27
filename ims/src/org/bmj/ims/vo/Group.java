@@ -1,11 +1,15 @@
 package org.bmj.ims.vo;
 
 import java.sql.Date;
+import java.util.Calendar;
 
 public class Group {
 	private int groupId;
 	private String name;
 	private Date debutDate;
+	
+	
+	private Calendar cal;
 	
 	public Group() {
 
@@ -27,6 +31,25 @@ public class Group {
 		return debutDate;
 	}
 	public void setDebutDate(Date debutDate) {
+		this.debutDate = debutDate;
+		cal = Calendar.getInstance();
+		cal.setTime(debutDate);
+	}
+
+	public int getDebutYear() {
+		return cal.get(Calendar.YEAR);
+	}
+	public int getDebutMonth() {
+		return cal.get(Calendar.MONTH)+1;
+	}
+	public int getDebutDay() {
+		return cal.get(Calendar.DATE);
+	}
+
+	public Group(int groupId, String name, Date debutDate) {
+		super();
+		this.groupId = groupId;
+		this.name = name;
 		this.debutDate = debutDate;
 	}
 	

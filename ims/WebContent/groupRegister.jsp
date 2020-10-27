@@ -24,7 +24,7 @@
 	//System.out.println("등록할 예쩡");
 	
 	//이 페이지에서 insert를 시킨후 groupList.jsp로 이동(redirect)
-	response.sendRedirect("/groupList.jsp");
+	response.sendRedirect("/groupDetail.jsp?groupId="+group.getGroupId());
 %>
 결과
 이름 : <%= name %><br/>

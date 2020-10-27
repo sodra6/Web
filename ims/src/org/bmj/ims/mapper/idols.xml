@@ -9,6 +9,61 @@ PUBLIC	"-//mybatis.org//DTD Mapper 3.0//EN"
 		FROM idols
 		ORDER BY 1
 	</select>
+	
+	<select id="selectOne" resultType="Idol" parameterType="int">
+		SELECT idol_id idolId, i.name, height, weight, birth_date birthDate, gender, g.group_id groupId,
+		g.name groupName
+		FROM idols i ,groups g
+		WHERE idol_id = #{idolId} ANd i.group_id=g.group_id
+
+	</select>
+	
+	<select id="selectOneName" resultType="Idol" parameterType="String">
+		SELECT idol_id idolId, i.name, height, weight, birth_date birthDate, gender, i.group_id groupId, g.name
+		FROM idols i, groups g
+		WHERE i.group_id=g.group_id AND g.name=#{groupName}
+		ORDER BY 1
+	</select>
+	
+	<insert id="insert" parameterType="Idol">
+		<selectKey order="BEFORE" resultType="int" keyProperty="idolId">
+		SELECT idols_seq.nextval
+		FROM dual
+		</selectKey>
+		INSERT INTO idols(idol_id,name,height,weight,birth_date,gender,group_id)
+		VALUES(#{idolId},#{name},#{height},#{weight},#{birthDate},#{gender},#{groupId})
+	</insert>
+	
+	<select id="selectListByGroupId" resultType="Idol" parameterType="int">
+		SELECT idol_id idolId, name, height, weight, birth_date birthDate, gender, group_id groupId
+		FROM idols
+		WHERE group_id = #{groupId}
+		ORDER BY 1
+	</select>
+	
+	<select id="delete" parameterType="int">
+		DELETE idols
+		WHERE idol_id = #{idolId}
+	</select>
+	<update id="update" parameterType="Idol">
+	UPDATE idols
+	SET name=#{name}, height=#{height}, weight=#{weight}, gender=#{gender}, birth_date=#{birthDate}, group_id=#{groupId}
+	WHERE idol_id = #{idolId}
+	</update>
+	
+	<select id="selectTotal" resultType="int">
+	SELECT COUNT(*)
+	FROM idols
+	</select>
+	<select id="selectList2" resultType="Idol" parameterType="PageVo">
+	SELECT idolId, name, height, weight, birthDate, gender, groupId
+	FROM
+	(SELECT idolId, name, height, weight, birthDate, gender, groupId, rownum r
+	FROM
+	(SELECT idol_id idolId, name, height, weight, birth_date birthDate, gender, group_id groupId
+	FROM idols))
+	WHERE r BETWEEN #{start} AND #{end}
+	</select>
 
 </mapper>
 
