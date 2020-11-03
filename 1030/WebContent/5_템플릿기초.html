@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>템플릿 기초</title>
+</head>
+<body>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/underscore-min.js"></script>
+<script>
+//_.template(불완전한html코드) 리턴자료형 : 함수
+	const tmp = _.template("<h1><%=name%></h1>");
+	//그 함수를 호출하면 그 결과가 문자열(완성된 html코드)
+	const html = tmp({name:"sonny"});
+	
+	alert(html);
+	
+	$("body").prepend(html);
+	
+	
+</script>
+</body>
+</html>

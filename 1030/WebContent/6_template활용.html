@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>음악목록</h1>
+<table border="1">
+	<thead>
+		<tr>
+			<th>제목</th>
+			<th>가수</th>
+			<th>장르</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td colspan="3">아직 없음</td>
+		</tr>
+	</tbody>
+</table>
+
+<script type="text/temlplate" id="musicTmpl">
+<% _.each(musicList, function(music){%>
+<tr>
+	<th><%=music.title%></td>
+	<td><%=music.artist%></td>
+	<td><%=music.genre%></td>
+</td>
+<%})%>
+</script>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/underscore-min.js"></script>
+<script>
+const musicList2 = [
+	 {"title":"너를 만나","artist":"폴킴", "genre":"발라드"},
+	 {"title":"Between us","artist":"제일라 다든", "genre":"R&B"},
+	 {"title":"왜이리 시끄러운것이냐?","artist":"머쉬배놈", "genre":"힙합"},
+	 {"title":"애국가","artist":"안익태", "genre":"국가"}
+]
+	
+	const musicTmpl = _.template($("#musicTmpl").html());
+	
+	$("tbody").html(musicTmpl({musicList : musicList2}))
+	//							이름		배열
+
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="book">
+	
+	<select id="selectList" resultType="Book">
+		SELECT no, title, author, page_num pageNum, publication_date publicationDate
+		FROM books
+	</select>
+
+</mapper>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>moment 라이브러리</title>
+</head>
+<body>
+<script src="/js/moment-with-locales.js"></script>
+<script>
+
+	//한국식 표기방법을 변환
+	moment.locale("ko");
+
+	const date = moment(736786800000);
+
+	//const year = date.year();
+	//const month = date.month();
+	//const date = date.date();
+	
+	alert(date.fromNow());
+	alert(date.format("YYYY-MM-DD HH:mm:ss"));
+
+		/*
+		  자바스크립트 대표적인 라이브러리
+		 
+		 	1) jquery : 
+		 		- DOM선택 쉽고(css의 선택자 활용), 
+		 		- 이벤트 처리가 쉽고, 
+		 		- ajax활용 쉽고, 
+		 		- 컨텐츠 변경이 용이(css,textm,html,val..)
+		 		- 이펙트, 애니메이션이 쉬움
+		 	2) moment
+		 		- 날짜관련 라이브러리
+		 		
+	 		3) underscore
+	 			- 배열 혹은 컬렉션에 대한 편리한 기능
+	 			- 템플릿 엔진
+		 */
+		 
+/*	const date = new Date(736786800000);
+	
+	const fullTime = date.getFullYear()+"년"+
+					(date.getMonth()+1)+"월"+
+					date.getDate()+"일";
+	
+	alert(date);
+*/
+</script>
+</body>
+</html>

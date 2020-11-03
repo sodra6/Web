@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>each의 여러가지 방법</title>
+</head>
+<body>
+<script src="/js/underscore-min.js"></script>
+<script src="/js/jquery.js"></script>
+<script>
+const musicList = [
+	 {"title":"너를 만나","artist":"폴킴", "genre":"발라드"},
+	 {"title":"Between us","artist":"제일라 다든", "genre":"R&B"},
+	 {"title":"왜이리 시끄러운것이냐?","artist":"머쉬배놈", "genre":"힙합"},
+	 {"title":"애국가","artist":"안익태", "genre":"국가"}
+]
+// 	배열을 반복하는 each는
+// 	1) jquery 메서드
+ 			$(musicList).each(function() {
+ 			alert(this.title);
+ 		});  //-> 여기서 객체는 this
+// 	2) jquery 함수
+			$.each(musicList, function(idx,music){
+				alert(idx+"번 "+music.title);
+			});//
+// 	3) underscore의 함수
+			_.each(musicList, function(music,idx){
+				alert(music.title)
+			});//
+
+
+
+ 
+
+</script>
+</body>
+</html>

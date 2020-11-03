@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/template" id="xxx">
+<@=a@> : <@=b@> : <@=c@>
+</script>
+
+
+<script src="js/jquery.js"></script>
+<script src="/js/underscore-min.js"></script>
+<script>
+_.templateSettings = {interpolate: /\<\@\=(.+?)\@\>/gim,evaluate: /\<\@([\s\S]+?)\@\>/gim,escape: /\<\@\-(.+?)\@\>/gim};
+	
+	//_.tempate("아룡하세요?");
+	const tmp = _.template($("#xxx").html());// 얘는 함수
+	
+	alert(tmp({"a":10,"b":100,"c":7}));
+
+</script>
+</body>
+</html>

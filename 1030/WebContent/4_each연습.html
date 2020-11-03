@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이치이치이치삶의 이치</title>
+</head>
+<body>
+<script src="/js/jquery.js"></script>
+<script src="/js/underscore-min.js"></script>
+<script>
+	const jjang9s=["짱구","훈이","맹구","유리","철수","봉미선","신영만"]
+	
+	$.each(jjang9s,function(idx,jjang9){
+		
+		alert(idx+"등 "+jjang9)
+	})// jquery each
+	
+	_.each(jjang9s,function(jjang9){
+		alert(jjang9);
+	})// underscore each
+	
+//	jjang9s.forEach(function(jjang9){
+//		alert(jjang9)
+//	})	
+	
+	for(let i=0; i<jjang9s.length; i++){
+		alert(jjang9s[i]);
+	}
+</script>
+</body>
+</html>
