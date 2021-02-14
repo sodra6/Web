@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<!-- NULL 입력하기 위한 세팅 -->
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL" />
+	</settings>
+
+	<!-- 타입엘리어스 설정 -->
+	<typeAliases>
+		<typeAlias type="com.sht.jao.gym_zip.vo.Book" alias="Book"/>
+	</typeAliases>
+
+	<!-- mapper 경로 설정 -->
+	<mappers>
+		<mapper resource="com/sht/jao/gym_zip/mapper/books.xml"/>
+	</mappers>
+
+
+
+</configuration>
